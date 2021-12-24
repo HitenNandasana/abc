@@ -595,7 +595,6 @@ vertical-align: super;
 	line-height: 55px;
 }
 .sp_menu ul li a{
-
 	padding-left: 15px;
 	font-size: 18px;
 	padding-top: 10px;
@@ -748,7 +747,40 @@ vertical-align: super;
 .rotate{
 	transform: rotate(180deg);
 }
-
+/* ---------------------------------user managenent------------------------------ */
+.user_nm{
+	margin-right: 7px;
+}
+.lgout{
+	margin-left: 13px;
+}
+.hp{
+	margin-left: 5px;
+}
+.space .container-fluid{
+	justify-content: flex-start;
+}
+.user_mng{
+	background-color: #FFFFFF;
+	width: 273px;
+	height: auto;
+}
+.user_mng ul{
+	list-style-type: none;
+	margin-left: -33px;
+}
+.user_mng ul li{
+	border-bottom: 0.5px solid #e5e5e5;
+	line-height: 55px;
+}
+.user_mng ul li a{
+	padding-left: 15px;
+	color: #646464;
+	text-decoration: none;
+}
+.user_mng_active:hover{
+	color: #1FB6FF;
+}
 /* ------------------------------------------------------------------------------------- */
 /*media*/
 @media screen and (max-width: 768px) {
