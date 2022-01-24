@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="shortcut icon" href="/images/favicon_img.png" type="image/x-icon">
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- header -->
+    <header class="site-header header-bg">
+        <div class="header-wrapper d-flex justify-content-between align-items-center">
+            <a href="#" title="Helper hand" class="logo-block">
+                <img src="/images/logo-small.png" alt="Helper hand logo">
+            </a>
+            <div class="header-right-block">
+                <div class="right-block-inner d-flex align-items-center">
+                    <nav class="navbar navbar-expand-lg align-items-center">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item">
+                                    <div class="btn-wrapper text-center">
+                                        <a href="#" title="Book now" class="blue-btn1">Book now</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link none_active" asp-action="Price" asp-controller="Home" title="Prices">Prices & services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link none_active" href="#" title="Our Guarantee">Warranty</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link none_active" href="#" title="Blog">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link none_active" asp-action="Contact" asp-controller="Home" title="Contact us">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="btn-wrapper text-center">
+                                        <a href="#" title="Login" class="blue-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="btn-wrapper text-center">
+                                        <a href="#" title="Become a Helper" class="blue-btn3">Become a Helper</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Modal Start -->
+    <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login to your account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-12 emailModal">
+                            <input type="email" class="form-control" id="" placeholder="Email">
+                            <i class="far fa-user"></i>
+                        </div>
+                        <div class="col-12 pswModal">
+                            <input type="password" class="form-control" id="" placeholder="Password">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 login-btn">
+                            <button type="button">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <div class="forgotpsw">
+                        <a id="frgLink" href="#" data-bs-toggle="modal" data-bs-target="#frgPsw">
+                            Forgot
+                            Password?
+                        </a>
+                    </div>
+                    <div class="accoutReg text-center">
+                        <p>Don't have an account? <a href="#">Create an account</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Modal End -->
+    <!-- Forgot Password Modal S -->
+    <div class="modal fade" id="frgPsw" aria-labelledby="frgPswLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="frgPswLabel">Forgot Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-12">
+                            <input type="email" class="form-control" id="" placeholder="Email Address">
+                        </div>
+                        <div class="col-12 send-btn">
+                            <button type="button">Send</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <div>
+                        <a href="#" class="loginlink" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Login
+                            Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forgot Password Modal E -->
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 footer-widget">
+                        <a href="#" title="Helper Hand">
+                            <img src="/images/site-logo.png" alt="Helper Hand">
+                        </a>
+                    </div>
+                    <div class="col-lg-8 footer-widget">
+                        <ul class="footer-navigation d-flex justify-content-center">
+                            <li>
+                                <a asp-action="Index" asp-controller="Home" title="Home">Home</a>
+                            </li>
+                            <li>
+                                <a asp-action="About" asp-controller="Home" title="About">About</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Testimonials">Testimonials</a>
+                            </li>
+                            <li>
+                                <a asp-action="Faq" asp-controller="Home" title="FAQs">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Insurance Policy">Insurance Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Impressum">Impressum</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 footer-widget">
+                        <ul class="social-media-list d-flex justify-content-end">
+                            <li>
+                                <a href="#" target="_blank" title="Facebook">
+                                    <img src="/images/ic-facebook.png" alt="Facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" title="Instagram">
+                                    <img src="/images/ic-instagram.png" alt="Instagram">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat nunc libero, ac malesuada ligula aliquam ac. <a href="#" title="Privacy Policy">Privacy Policy</a></p>
+                <a href="#" class="yellow-btn ok-btn">OK!</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="row faq-policy text-center">
+                <p>©2018 Helperland. All rights reserved. Terms and Conditions | Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.js"></script>
+    <script src="~/js/general.js"></script>
+</body>
+</html>
